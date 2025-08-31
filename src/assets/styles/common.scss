@@ -1,0 +1,116 @@
+@use "../styles/mixins.scss" as *;
+@use "../styles/vars.scss" as *;
+
+:root {
+  --primary-text-color: #383A41;
+  --primary-border-color: #CEDBE7;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Geologica", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  font-family: inherit;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+}
+
+button {
+  background: none;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.App {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto auto;
+  grid-template-columns: 100%;
+  background-color: $gray;
+  color: $black;
+}
+
+.main {
+  padding: 0;
+ 
+  &_pt-85 {
+    padding-top: 85px;
+
+    @media(max-width: $mobile-s) {
+        padding-top: 60px;
+    }
+  }
+
+  &_add-left-gradient-color {
+    background-position: top left;
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(155deg, $middle-gray, $gray, transparent);
+  }
+
+  &_add-right-gradient-color {
+    background-position: top right;
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(-155deg, $middle-gray, $gray, transparent);
+  }
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: black;
+  transition: color 0.3s;
+
+  &:hover {
+    color: $secondary600;
+  }
+  &.active {
+    color: $secondary600;
+  }
+}

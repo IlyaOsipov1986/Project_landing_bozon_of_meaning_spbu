@@ -1,0 +1,314 @@
+@use "../styles/vars.scss" as *;
+
+@mixin base-11 {
+  font-size: 11px;
+}
+  
+@mixin medium {
+  font-weight: 600;
+}
+  
+@mixin h1 {
+  font-weight: 500;
+  font-size: 48px;
+}
+  
+@mixin h2 {
+  font-weight: 700;
+  font-size: 40px;
+}
+
+@mixin h3 {
+  font-weight: 700;
+  font-size: 36px;
+}
+  
+@mixin h4 {
+  font-weight: 500;
+  font-size: 32px;
+}
+  
+@mixin h5 {
+  font-weight: 500;
+  font-size: 24px;
+}
+  
+@mixin h6 {
+  font-weight: 600;
+  font-size: 20px;
+}
+  
+@mixin h7 {
+  font-weight: 500;
+  font-size: 18px;
+}
+  
+@mixin h8 {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+@mixin body-large {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+@mixin body-default {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+@mixin body-small {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+@mixin body-smaller {
+  font-weight: 400;
+  font-size: 12px;
+}
+
+@mixin body-least {
+  font-weight: 400;
+  font-size: 11px;
+}
+
+@mixin base-135 {
+  font-size: 135px;
+}
+
+@mixin base-100 {
+  font-size: 100px;
+}
+
+@mixin base-80 {
+  font-size: 80px;
+}
+
+@mixin base-70 {
+  font-size: 70px;
+}
+
+@mixin base-75 {
+  font-size: 75px;
+}
+
+@mixin base-60 {
+  font-size: 60px;
+}
+
+@mixin base-55 {
+  font-size: 55px;
+}
+
+@mixin base-50 {
+  font-size: 50px;
+}
+
+@mixin base-40 {
+  font-size: 40px;
+}
+
+@mixin base-36 {
+  font-size: 36px;
+}
+
+@mixin base-32 {
+  font-size: 32px;
+}
+
+@mixin base-30 {
+  font-size: 30px;
+}
+
+@mixin base-27 {
+  font-size: 27px;
+}
+
+@mixin base-26 {
+  font-size: 26px;
+}
+
+@mixin base-25 {
+  font-size: 25px;
+}
+  
+@mixin base-23 {
+  font-size: 23px;
+}
+
+@mixin base-24 {
+  font-size: 24px;
+}
+
+@mixin base-20 {
+  font-size: 20px;
+}
+
+@mixin base-18 {
+  font-size: 18px;
+}
+
+@mixin base-17 {
+  font-size: 17px;
+}
+
+@mixin base-16 {
+  font-size: 16px;
+}
+
+@mixin base-15 {
+  font-size: 15px;
+}
+
+@mixin base-14 {
+  font-size: 14px;
+}
+
+@mixin base-12 {
+  font-size: 12px;
+}
+
+@mixin base-11 {
+  font-size: 11px;
+}
+
+@mixin base-10 {
+  font-size: 10px;
+}
+
+@mixin light {
+  font-weight: 200;
+}
+
+@mixin regular {
+  font-weight: 400;
+}
+
+@mixin regular-500 {
+  font-weight: 500;
+}
+
+@mixin medium {
+  font-weight: 600;
+}
+
+@mixin bold {
+  font-weight: 700;
+}
+
+@mixin text-gray {
+  color: $gray;
+}
+
+@mixin text-black {
+  color: var(--primary-text-color);
+}
+
+@mixin text-red-ligth {
+  color: $secondary300;
+}
+
+@mixin text-red {
+  color: $default2;
+}
+
+@mixin font-lato {
+  font-family: 'Lato';
+}
+
+@mixin font-yeseva-one {
+  font-family: 'Yeseva One';
+}
+
+@mixin text-middle-gray {
+  color: $primary500;
+}
+
+@mixin text-word-wrap {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+@mixin base-line-height-100 {
+  line-height: 100%;
+}
+
+@mixin base-line-height-s {
+  line-height: 121%;
+}
+
+@mixin base-line-height-sm {
+  line-height: 130%;
+}
+
+@mixin base-line-height-m {
+  line-height: 144%;
+}
+
+@mixin base-line-height-l {
+  line-height: 150%;
+}
+
+@mixin base-line-height-xl {
+  line-height: 160%;
+}
+
+@mixin px-line-height-m {
+  line-height: 45px;
+}
+
+@mixin px-line-height-s {
+  line-height: 36px;
+}
+
+@mixin dark-theme_h1 {
+  line-height: 120%;
+  font-size: 72px;
+  font-family: 'Roboto Mono';
+  color: $white;
+  font-weight: 500;
+
+
+  @media (max-width: 1770px) {
+    font-size: 60px;
+  }
+
+  @media (max-width: $laptop) {
+    font-size: 45px;
+  }
+
+  @media (max-width: $mobile-s) {
+    font-size: 35px;
+  }
+}
+
+@mixin dark-theme_h3_red {
+  font-size: 40px;
+  font-family: 'Roboto Mono';
+  font-weight: 400;
+  color: $secondary300;
+
+  @media (max-width: $tablet) {
+    font-size: 30px;
+  }
+
+  @media (max-width: $mobile-s) {
+    font-size: 20px;
+  }
+}
+
+@mixin dark-theme_h5 {
+  line-height: 130%;
+  font-size: 20px;
+  font-family: 'Roboto Mono';
+  color: $secondary300;
+  font-weight: 500;
+}
+
+@mixin dark-theme_p {
+  line-height: 150%;
+  font-size: 16px;
+  font-weight: 200;
+  color: $white;
+}

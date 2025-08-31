@@ -1,0 +1,13 @@
+@use "../../../assets/styles/vars.scss";
+@use "../../../assets/styles/mixins.scss";
+
+.footer-container {
+  display: grid;
+  grid-template: 280px 63px / auto repeat(3, 383px) auto;
+  margin: 0 auto;
+  box-sizing: border-box;
+  max-width: 100%;
+  width: 1756px;
+  border-top: 1px solid var(--primary-border-color);
+  padding: 0 15px;
+}

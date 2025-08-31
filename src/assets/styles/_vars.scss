@@ -1,0 +1,41 @@
+$primary800: #181D27;
+$primary700: #383A41;
+$primary500: #8C959E;
+$primary300: #CEDBE7;
+$primary200: #ECF0F6;
+
+$secondary600: #AC3639;
+$secondary300: #C74E4E;
+
+$linear-gradient-red: linear-gradient(#AC3639, #C74E4E);
+$linear-gradient-black: linear-gradient(#383A41, #8C959E);
+
+$default: $primary700;
+$default2: $secondary600;
+$hover: $secondary600;
+$pressed: $primary300;
+$disabled: $primary300;
+
+$tertiaryError: #FF6E8C;
+$tertiaryOkey: #00D1B4;
+$tertiaryAttention: #FF9900;
+
+$white: #FFFFFF;
+$ghostWhite: #F9FBFF;
+$middle-gray: #CDDBE8;
+$gray: #F7F8F9;
+$black: #1D1D1D;
+$strongBlack: #14161F;
+$middleBlack: #1A1C26;
+$strongGray: #444855;
+$white-opacity: rgba(255, 255, 255, 0.5);
+
+$large-screen-size: 1660px;
+$middle-screen-size: 1440px;
+$laptop: 1362px;
+$tablet: 1200px;
+$tablet-xs: 1000px;
+$mobile: 767px;
+$mobile-s: 550px;
+$mobile-xs: 480px;
+$mobile-extra-xs: 375px;
