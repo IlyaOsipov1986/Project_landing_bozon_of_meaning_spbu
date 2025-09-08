@@ -1,12 +1,12 @@
 @use '../../../assets/styles/vars.scss' as *;
 
 .container_size_default {
-  width: 1150px;
+  width: 1364px;
   max-width: 100%;
   margin: 0 auto;
  
   @media (max-width: $laptop) {
-    width: 1180px;
+    width: 1280px;
     padding: 0 40px;
   }
 

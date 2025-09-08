@@ -10,7 +10,7 @@ const Slider = () => {
             <div className="slider-block">
                 <div className="slider-square"/>
                 <div className="slider-block__logo">
-                    <div>
+                    <div className="slider-block__logo-play-wrap">
                         <div className="slider-block__logo-play-btn"/>
                     </div>
                     <div className="slider-block__logo-item-icon"/>
