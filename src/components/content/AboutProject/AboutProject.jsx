@@ -6,7 +6,7 @@ import { AboutProjectDataCards } from "../../../config";
 const AboutProject = () => {
 
     return (
-        <section className="about-project">
+        <section id="About-project" className="about-project">
             <Container>
                 <div className="about-project__container">
                     <h1 className="about-project__title">О Проекте</h1>
@@ -33,7 +33,7 @@ const AboutProject = () => {
                         </div>
                         <p className="about-project__card_desc">{AboutProjectDataCards[2]?.desc}</p>
                         <div>
-                            <img src={linkButton} alt=""/>
+                            <img className="about-project__card_link_btn" src={linkButton} alt=""/>
                         </div>
                     </div>
                 </div>

@@ -8,10 +8,7 @@ const Nav = ({ onHandleClick = () => {} }) => {
             <ul>
             {headerLinks.map((link) => (
                 <li key={link.id}>
-                    <Link to={link.link}
-                          className="link"
-                          onClick={onHandleClick}
-                    >
+                    <Link className="link" onClick={() => onHandleClick(link.link)}>
                         {link.title}
                     </Link>
                 </li>
