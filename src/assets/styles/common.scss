@@ -68,10 +68,10 @@ img {
 .App {
   min-height: 100vh;
   display: grid;
-  grid-template-rows: auto 1fr auto auto;
+  grid-template-rows: auto 1fr auto;
   grid-template-columns: 100%;
-  background-color: $gray;
-  color: $black;
+  background-color: $black;
+  color: $white;
 }
 
 .main {
@@ -108,9 +108,9 @@ img {
   transition: color 0.3s;
 
   &:hover {
-    color: $secondary600;
+    color: $violet;
   }
   &.active {
-    color: $secondary600;
+    color: $violet;
   }
 }
