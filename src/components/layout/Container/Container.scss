@@ -4,7 +4,7 @@
   width: 1364px;
   max-width: 100%;
   margin: 0 auto;
- 
+
   @media (max-width: $laptop) {
     width: 1280px;
     padding: 0 40px;
@@ -20,11 +20,11 @@
 }
 
 .container_size_large {
-  width: 1756px;
+  width: 1393px;
   max-width: 100%;
   margin: 0 auto;
-  padding: 0 50px;
-  box-sizing: border-box;
+  // padding: 0 50px;
+  // box-sizing: border-box;
 
   @media (max-width: $laptop) {
     padding: 0 40px;

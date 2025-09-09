@@ -2,7 +2,7 @@ export const headerLinks = [
     {
         id: 0,
         title: "О проекте",
-        link: "About-project",
+        link: "about-project",
     },
     {
         id: 1,
