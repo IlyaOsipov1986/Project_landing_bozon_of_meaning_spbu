@@ -1,8 +1,14 @@
+import Slider from "../../components/ui/Slider/Slider";
+import AboutProject from "../../components/content/AboutProject/AboutProject";
+import Filming from "../../components/content/Filming/Filming";
+
 const HomePage = () => {
 
     return (
         <main className="main main-overflow-hidden">
-            home
+           <Slider/>
+           <AboutProject/>
+           <Filming/>
         </main>
     )
 }

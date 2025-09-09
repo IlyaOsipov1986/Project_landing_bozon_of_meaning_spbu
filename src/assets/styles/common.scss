@@ -68,17 +68,17 @@ img {
 .App {
   min-height: 100vh;
   display: grid;
-  grid-template-rows: auto 1fr auto auto;
+  grid-template-rows: auto 1fr auto;
   grid-template-columns: 100%;
-  background-color: $gray;
-  color: $black;
+  background-color: $black;
+  color: $white;
 }
 
 .main {
   padding: 0;
  
-  &_pt-85 {
-    padding-top: 85px;
+  &_pt-88 {
+    padding-top: 88px;
 
     @media(max-width: $mobile-s) {
         padding-top: 60px;
@@ -108,9 +108,9 @@ img {
   transition: color 0.3s;
 
   &:hover {
-    color: $secondary600;
+    color: $violet;
   }
   &.active {
-    color: $secondary600;
+    color: $violet;
   }
 }

@@ -14,14 +14,28 @@ const Header = () => {
 
   // const isMobile = useMobile('1200px');
 
+  const scrollToElement = (elementId, offset = 0) => {
+    console.log(elementId)
+    const element = document.getElementById(elementId);
+    if (element) {
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+         top: offsetPosition,
+         behavior: 'smooth' 
+      })
+    }
+  }
+
   return (
     <header className="header">
       <div className="header-container">
-        <Link to="/" className="header-logo-link">
-          <img className="header__logo" src={logoBozon} alt="Бозон смысла" />
-        </Link>
-        <div className="topbar__block">
-          <Nav />
+        <div className="header__block">
+          <div style={{display: 'flex'}}>
+           <img className="header__logo" src={logoBozon} alt="Бозон смысла" />
+          </div>
+          <Nav onHandleClick={scrollToElement}/>
         </div>
         {/* <div className='header-link__block'>
                     {isMobile &&

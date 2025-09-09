@@ -1,0 +1,57 @@
+@use "../../../assets/styles/vars" as *;
+@use "../../../assets/styles/mixins" as *;
+
+.row-left-right-buttons__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.row-left-right-buttons__btn-prev {
+    width: 59px;
+    height: 59px;
+    cursor: pointer;
+    background-image: url('../../../assets/img/icons/leftArrow.svg');
+    transition: 0.3s ease;
+    background-position: center;
+    background-size: cover;
+
+    &:hover {
+        background-image: url('../../../assets/img/icons/leftArrow.svg');
+        width: 59px;
+        height: 59px;
+        transform: scale(1.1);
+    }
+}
+
+.row-left-right-buttons__btn-next {
+    width: 59px;
+    height: 59px;
+    cursor: pointer;
+    background-image: url('../../../assets/img/icons/rightArrow.svg');
+    transition: 0.3s ease;
+    background-position: center;
+    background-size: cover;
+
+    &:hover {
+        background-image: url('../../../assets/img/icons/rightArrow.svg');
+        width: 59px;
+        height: 59px;
+        transform: scale(1.1);
+    }
+}
+
+.row-left-right-buttons__not-active-left {
+    pointer-events: none;
+    background-image: url('../../../assets/img/icons/leftArrowViolet.svg');
+    width: 59px;
+    height: 59px;
+}
+
+.row-left-right-buttons__not-active-right {
+    pointer-events: none;
+    background-image: url('../../../assets/img/icons/rightArrowViolet.svg');
+    width: 59px;
+    height: 59px;
+}

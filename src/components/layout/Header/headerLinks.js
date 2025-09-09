@@ -2,7 +2,7 @@ export const headerLinks = [
     {
         id: 0,
         title: "О проекте",
-        link: "About-project",
+        link: "about-project",
     },
     {
         id: 1,
@@ -27,7 +27,7 @@ export const headerLinks = [
     {
         id: 5,
         title: "Наша команда",
-        link: "Our-team",
+        link: "our-team",
     }
   ];
   
