@@ -22,15 +22,16 @@ const Slider = () => {
             </div>
             <div className="slider-headline__wrap">
                 <div className="slider-headline__image">
-                    <img src={sliderImageOne} style={{
+                    <img src={sliderImageOne} 
+                        style={{
                             backgroundRepeat: 'no-repeat',
                             backgroundSize: 'cover',
                             backgroundPosition: 'bottom',
                             width: '100%',
                             height: '100%',
                         }}
-                         className="slider-headline__image-desktop"
-                         alt="image-bg"
+                        className="slider-headline__image-desktop"
+                        alt="image-bg"
                     />
                     {/* <img src={sliderImageOneMobile} style={{
                         backgroundRepeat: 'no-repeat',

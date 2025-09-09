@@ -1,6 +1,5 @@
 import "./AboutProject.scss";
 import Container from "../../layout/Container/Container";
-import linkButton from "../../../assets/img/icons/linkButton.svg";
 import { aboutProjectDataCards } from "../../../config";
 
 const AboutProject = () => {
@@ -32,9 +31,7 @@ const AboutProject = () => {
                             <img src={aboutProjectDataCards[2]?.icon} alt=""/>
                         </div>
                         <p className="about-project__card_desc">{aboutProjectDataCards[2]?.desc}</p>
-                        <div>
-                            <img className="about-project__card_link_btn" src={linkButton} alt=""/>
-                        </div>
+                        <div className="about-project__card_link_btn"/>
                     </div>
                 </div>
             </Container>

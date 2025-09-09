@@ -1,0 +1,36 @@
+@use '../../../assets/styles/vars.scss' as *;
+@use '../../../assets/styles/mixins.scss' as *;
+
+.stories {
+    overflow: hidden;
+    margin-bottom: 57px;
+}
+
+.stories__container {
+    display: grid;
+    grid-template-columns: 485px auto;
+}
+
+.stories__title {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 65px;
+
+    h1 {
+        @include font-lato;
+        letter-spacing: -1px;
+        @include base-80;
+        @include regular-500;
+        line-height: 125%;
+        color: $violet;
+    }
+
+    p {
+        color: $white;
+        @include base-16;
+        line-height: 25px;
+        @include light;
+        opacity: 70%;
+    }
+}

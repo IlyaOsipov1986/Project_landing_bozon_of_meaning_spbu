@@ -1,0 +1,362 @@
+@use '../../../assets/styles/vars.scss' as *;
+@use '../../../assets/styles/mixins.scss' as *;
+
+.vk-video-carousel {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+}
+
+.carousel-container {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.video-swiper {
+  padding: 1rem 0;
+}
+
+.video-slide {
+  width: 300px;
+  opacity: 0.6;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+
+  &.swiper-slide-active {
+    opacity: 1;
+    transform: scale(1.05);
+    
+    .video-card {
+      box-shadow: 0 8px 35px rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+
+.video-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
+
+.video-thumbnail {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+
+    &.active {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  .video-card:hover & {
+    opacity: 1;
+  }
+}
+
+.video-duration {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.play-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    margin-left: 2px;
+  }
+}
+
+.video-info {
+  padding: 1.2rem;
+
+  .video-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .video-author {
+    font-size: 0.9rem;
+    color: #4a5568;
+    margin: 0 0 0.5rem 0;
+    font-weight: 500;
+  }
+
+  .video-views {
+    font-size: 0.8rem;
+    color: #718096;
+    font-weight: 400;
+  }
+}
+
+.active-indicator {
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  .active-pulse {
+    width: 8px;
+    height: 8px;
+    background: #667eea;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(102, 126, 234, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(102, 126, 234, 0);
+  }
+}
+
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #667eea;
+    color: white;
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+  }
+
+  &.carousel-prev {
+    left: -24px;
+  }
+
+  &.carousel-next {
+    right: -24px;
+  }
+
+  &.swiper-button-disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    
+    &:hover {
+      background: white;
+      color: currentColor;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.range-container {
+    flex: 1;
+    max-width: 1137px;
+    position: relative;
+    padding-right: 228px;
+}
+
+.carousel-range {
+  width: 100%;
+  height: 1px;
+  background: #e2e8f0;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  
+  // Webkit браузеры
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 170px;
+    height: 10px;
+    background: #667eea;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+    transition: all 0.2s ease;
+  }
+  
+  // Firefox
+  &::-moz-range-thumb {
+    width: 170px;
+    height: 10px;
+    background: #667eea;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+  }
+  
+  // Track для Firefox
+  &::-moz-range-track {
+    width: 100%;
+    height: 2px;
+     background: $strongViolet;
+    border: none;
+  }
+  
+  // Progress для Webkit
+  &::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 2px;
+    background: $strongViolet;
+    border: none;
+  }
+}
+
+.carousel-counter {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2d3748;
+  min-width: 60px;
+  text-align: center;
+  
+  .current-index {
+    color: #667eea;
+  }
+  
+  .total {
+    color: #a0aec0;
+  }
+}
+
+// Адаптивность
+@media (max-width: 768px) {
+  .vk-video-carousel {
+    padding: 1rem;
+  }
+
+  .carousel-title {
+    font-size: 2rem !important;
+  }
+
+  .video-slide {
+    width: 250px;
+  }
+
+  .video-thumbnail {
+    height: 220px;
+  }
+
+  .carousel-nav {
+    width: 40px;
+    height: 40px;
+    
+    &.carousel-prev {
+      left: -20px;
+    }
+    
+    &.carousel-next {
+      right: -20px;
+    }
+  }
+
+  .carousel-controls {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .range-container {
+    max-width: 100%;
+    order: 2;
+  }
+
+  .carousel-counter {
+    order: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-slide {
+    width: 220px;
+  }
+
+  .video-thumbnail {
+    height: 200px;
+  }
+
+  .carousel-range {
+    height: 4px;
+    
+    &::-webkit-slider-thumb {
+      width: 18px;
+      height: 18px;
+    }
+    
+    &::-moz-range-thumb {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
