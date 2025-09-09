@@ -1,7 +1,7 @@
 import "./AboutProject.scss";
 import Container from "../../layout/Container/Container";
 import linkButton from "../../../assets/img/icons/linkButton.svg";
-import { AboutProjectDataCards } from "../../../config";
+import { aboutProjectDataCards } from "../../../config";
 
 const AboutProject = () => {
 
@@ -14,24 +14,24 @@ const AboutProject = () => {
                 <div className="about-project__card-block">
                     <div className="about-project__card_1">
                         <div className="about-project__card_icon">
-                            <img src={AboutProjectDataCards[0]?.icon} alt=""/>
+                            <img src={aboutProjectDataCards[0]?.icon} alt=""/>
                         </div>
-                        <h5 className="about-project__card_title">{AboutProjectDataCards[0]?.title}</h5>
-                        <p className="about-project__card_desc">{AboutProjectDataCards[0]?.desc}</p>
+                        <h5 className="about-project__card_title">{aboutProjectDataCards[0]?.title}</h5>
+                        <p className="about-project__card_desc">{aboutProjectDataCards[0]?.desc}</p>
                     </div>
                     <div className="about-project__card_2">
                         <div className="about-project__card_icon">
-                           <img src={AboutProjectDataCards[1]?.icon} alt=""/> 
+                           <img src={aboutProjectDataCards[1]?.icon} alt=""/> 
                         </div>
-                        <h5 className="about-project__card_title">{AboutProjectDataCards[1]?.title}</h5>
-                        <p className="about-project__card_desc">{AboutProjectDataCards[1]?.desc}</p>
+                        <h5 className="about-project__card_title">{aboutProjectDataCards[1]?.title}</h5>
+                        <p className="about-project__card_desc">{aboutProjectDataCards[1]?.desc}</p>
                         <div className="about-project__card_bg-image"/>
                     </div>
                     <div className="about-project__card_3">
                         <div className="about-project__card_icon">
-                            <img src={AboutProjectDataCards[2]?.icon} alt=""/>
+                            <img src={aboutProjectDataCards[2]?.icon} alt=""/>
                         </div>
-                        <p className="about-project__card_desc">{AboutProjectDataCards[2]?.desc}</p>
+                        <p className="about-project__card_desc">{aboutProjectDataCards[2]?.desc}</p>
                         <div>
                             <img className="about-project__card_link_btn" src={linkButton} alt=""/>
                         </div>

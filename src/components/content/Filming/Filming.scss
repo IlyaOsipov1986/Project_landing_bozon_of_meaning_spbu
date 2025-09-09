@@ -2,7 +2,22 @@
 @use '../../../assets/styles/mixins.scss' as *;
 
 .filming {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 207px;
+    position: relative;
+
+    .row-left-right-buttons__container {
+        z-index: 10;
+    }
+
+    .filming__slider-background {
+        z-index: 10;
+    }
+
+    .filming__container-background {
+        z-index: 5;
+    }
 }
 
 .filming__container {
@@ -10,6 +25,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
     row-gap: 82px;
+    position: relative;
 }
 
 .filming__slider-background {
@@ -40,6 +56,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 
     img {
         object-fit: cover;
@@ -54,18 +71,63 @@
     column-gap: 62px; 
 }
 
-.filming__main-title {
+.filming__main-title-wrap {
     display: flex;
     justify-content: flex-end;
     align-items: end;
+    position: relative;
+}
+
+.filming__main-title {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    z-index: 44;
+    top: -150px;
+    left: 50px;
+
+    h1 {
+        @include font-lato;
+        @include base-90;
+        line-height: 85px;
+    }
+}
+
+.filming__main-title-item-without-img {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.filming__main-title-item {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 25px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .filming__main-desc {
     display: block;
-  
+
     p {
         @include base-16;
         @include light;
-        line-height: 25px;  
+        line-height: 25px;
+        opacity: 70%;  
     }
+}
+
+.filming__container-background {
+    position: absolute;
+    bottom: -340px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../../../assets/img/filmingBgImageBlur.png');
 }

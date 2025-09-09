@@ -81,6 +81,10 @@
   font-size: 100px;
 }
 
+@mixin base-90 {
+  font-size: 90px;
+}
+
 @mixin base-80 {
   font-size: 80px;
 }
@@ -218,7 +222,7 @@
 }
 
 @mixin font-lato {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 @mixin font-yeseva-one {

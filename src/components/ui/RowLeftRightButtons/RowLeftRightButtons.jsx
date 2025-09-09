@@ -1,17 +1,16 @@
 import "./RowLeftRightButtons.scss";
 import classNames from "classnames";
 
-// eslint-disable-next-line no-unused-vars
 const RowLeftRightButtons = ({prevGroup, nextGroup, isNotActiveArrow = {} }) => {
 
     const btnPrevClass = classNames({
         'row-left-right-buttons__btn-prev': true,
-        // 'row-left-right-buttons__not-active-left': isNotActiveArrow.isLeftArrow,
+        'row-left-right-buttons__not-active-left': isNotActiveArrow.isLeftArrow,
     });
 
     const btnNextClass = classNames({
         'row-left-right-buttons__btn-next': true,
-        // 'row-left-right-buttons__not-active-right': isNotActiveArrow.isRightArrow,
+        'row-left-right-buttons__not-active-right': isNotActiveArrow.isRightArrow,
     });
 
     return (

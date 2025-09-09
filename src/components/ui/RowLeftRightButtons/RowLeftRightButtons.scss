@@ -42,16 +42,16 @@
     }
 }
 
-// .row-left-right-buttons__not-active-left {
-//     pointer-events: none;
-//     background-image: url('../../../assets/img/icons/arrowLeftRed.svg');
-//     width: 59px;
-//     height: 59px;
-// }
+.row-left-right-buttons__not-active-left {
+    pointer-events: none;
+    background-image: url('../../../assets/img/icons/leftArrowViolet.svg');
+    width: 59px;
+    height: 59px;
+}
 
-// .row-left-right-buttons__not-active-right {
-//     pointer-events: none;
-//     background-image: url('../../../assets/img/icons/arrowRightRed.svg');
-//     width: 59px;
-//     height: 59px;
-// }
+.row-left-right-buttons__not-active-right {
+    pointer-events: none;
+    background-image: url('../../../assets/img/icons/rightArrowViolet.svg');
+    width: 59px;
+    height: 59px;
+}
