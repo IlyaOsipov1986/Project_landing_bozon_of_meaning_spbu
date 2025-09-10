@@ -4,9 +4,9 @@ import { Navigation, FreeMode, Mousewheel, Keyboard } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/free-mode';
-import './VKVideoCarousel.scss';
+import './VideoGalleryCarousel.scss';
 
-const VKVideoCarousel = () => {
+const VideoGalleryCarousel= () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const swiperRef = useRef(null);
 
@@ -111,4 +111,4 @@ const VKVideoCarousel = () => {
   );
 };
 
-export default VKVideoCarousel;
+export default VideoGalleryCarousel;

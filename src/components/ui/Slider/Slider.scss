@@ -222,21 +222,3 @@
         display: none;
     }
 }
-
-@keyframes lift {
-    0% {
-      transform: translateY(0); /* Начальная позиция */
-    }
-    100% {
-      transform: translateY(95px); /* Конечная позиция (подъём на 50px) */
-    }
-  }
-
-  @keyframes lower {
-    0% {
-      transform: translateY(95px); /* Начальная позиция (после подъёма) */
-    }
-    100% {
-      transform: translateY(0); /* Конечная позиция (возврат в исходное положение) */
-    }
-  }

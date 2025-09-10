@@ -3,7 +3,7 @@
 
 .stories {
     overflow: hidden;
-    margin-bottom: 57px;
+    margin-bottom: 150px;
 
     @media (max-width: $tablet) {
         margin-bottom: 70px;
@@ -33,7 +33,7 @@
     h1 {
         letter-spacing: -1px;
         @include base-80;
-        @include regular-500;
+        @include regular;
         line-height: 125%;
         color: $violet;
 

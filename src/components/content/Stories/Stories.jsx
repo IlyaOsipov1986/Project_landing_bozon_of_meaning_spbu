@@ -1,5 +1,5 @@
 import "./Stories.scss";
-import VKVideoCarousel from "../../ui/VKVideoCarousel/VKVideoCarousel";
+import VideoGalleryCarousel from "../../ui/VideoGalleryCarousel/VideoGalleryCarousel";
 import Container from "../../layout/Container/Container";
 
 const Stories = () => {
@@ -12,7 +12,7 @@ const Stories = () => {
                       <h1>Истории</h1>
                       <p>Небольшое описание блока</p>  
                     </div>
-                    <VKVideoCarousel />
+                    <VideoGalleryCarousel />
                 </div>
             </Container>
         </section>

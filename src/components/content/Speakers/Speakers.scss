@@ -1,0 +1,116 @@
+@use '../../../assets/styles/vars.scss' as *;
+@use '../../../assets/styles/mixins.scss' as *;
+
+.speakers {
+    margin-bottom: 85px;
+}
+
+.speakers__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 660px;
+    align-items: center;
+    column-gap: 70px;
+}
+
+.speakers__images-wrap {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.speakers__images__bg-wrap {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 600px;
+    height: 600px;
+}
+
+.speakers__images-bg {
+    width: 100%;
+    height: 100%;
+}
+
+.speakers__circle-image {
+  width: 150px;
+  height: 150px;
+  border: 2px solid $strongViolet;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.speakers__circle-image_1 {
+    position: absolute;
+    right: 70px;
+    top: 80px;
+}
+
+.speakers__circle-image_2 {
+    position: absolute;
+    bottom: 40px;
+    right: 160px;
+}
+
+.speakers__circle-image_3 {
+    position: absolute;
+    bottom: 140px;
+    left: 0;
+}
+
+.speakers__circle-image_4 {
+    position: absolute;
+    top: 30px;
+    left: 100px;
+}
+
+.speakers__circle-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.speakers__circle-image:hover {
+  box-shadow: 0 20px 80px $violet;
+  transform: scale(1.1);
+}
+
+.speakers__desc-speaker {
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+
+    p {
+        color: $white;
+        line-height: 25px;
+        @include base-16;
+        @include light;
+        opacity: 70%;
+    }
+}
+
+.speakers__desc-speaker__name {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    h5 {
+        @include base-25;
+        @include regular;
+        font-style: italic;
+        line-height: 28px;
+    }
+
+    span {
+        @include base-16;
+        line-height: 25px;
+        @include light;
+        color: $blue;
+    }
+}

@@ -4,6 +4,10 @@ import aboutProjectCardIcon_03 from "./assets/img/icons/aboutProjectCardIcon_03.
 import filmingSliderImage_01 from "./assets/img/filmingSliderImage_01.png";
 import filmingSliderImage_02 from "./assets/img/filmingSliderImage_02.png";
 import filmingSliderImage_03 from "./assets/img/filmingSliderImage_03.png";
+import speakersImage_01 from "./assets/img/speakersImage_01.png";
+import speakersImage_02 from "./assets/img/speakersImage_02.png";
+import speakersImage_03 from "./assets/img/speakersImage_03.png";
+import speakersImage_04 from "./assets/img/speakersImage_04.png";
 
 export const urlPage = {
   home: '/',
@@ -38,5 +42,40 @@ export const filmingDataImages = [
   {
     id: 2,
     image: filmingSliderImage_03
+  }
+]
+
+export const speakersData = [
+    {
+    id: 0,
+    image: speakersImage_01,
+    name: 'Константин Амелин',
+    jobTitle: 'Кандидат физико-математических наук, Директор Центр искусственного интеллекта СПбГУ',
+    bio: 'Директор Центра ИИ СПбГУ, ученый и инженер в области робототехники, искусственного интеллекта и мультиагентных систем с 15-летним опытом научной и практической деятельности. Автор 6 зарегистрированных патентов и многочисленных публикаций в ведущих международных журналах, участник престижных международных коллабораций с NTNU (Норвегия) и HUST (Китай). Обладает глубокой экспертизой в разработке систем управления для беспилотных летательных аппаратов (БПЛА), подводных робототехнических комплексов и распределенных вычислительных систем. Разработанные алгоритмы управления группами роботов в условиях неопределенности успешно применяются в логистике, мониторинге промышленных объектов и исследовании труднодоступных территорий. Совмещает научную работу с преподаванием курсов по робототехнике, искусственному интеллекту и мультиагентным технологиям в СПбГУ.',
+    addClass: 'speakers__circle-image_1'  
+  },
+  {
+    id: 1,
+    image: speakersImage_02,
+    name: '',
+    jobTitle: '',
+    bio: '',
+     addClass: 'speakers__circle-image_2'  
+  },
+  {
+    id: 2,
+    image: speakersImage_03,
+    name: '',
+    jobTitle: '',
+    bio: '',
+     addClass: 'speakers__circle-image_3'  
+  },
+  {
+    id: 3,
+    image: speakersImage_04,
+    name: '',
+    jobTitle: '',
+    bio: '',
+     addClass: 'speakers__circle-image_4'  
   }
 ]
