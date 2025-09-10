@@ -17,7 +17,7 @@
 }
 
 .video-slide {
-  width: 300px;
+  width: 275px;
   opacity: 0.6;
   transition: opacity 0.3s ease, transform 0.3s ease;
 
@@ -32,8 +32,7 @@
 }
 
 .video-card {
-  background: white;
-  border-radius: 16px;
+  border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
@@ -48,7 +47,7 @@
 .video-thumbnail {
   position: relative;
   width: 100%;
-  height: 280px;
+  height: 440px;
   overflow: hidden;
 
   img {
@@ -64,6 +63,7 @@
 }
 
 .video-overlay {
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -113,6 +113,7 @@
 }
 
 .video-info {
+  display: none;
   padding: 1.2rem;
 
   .video-title {
@@ -138,36 +139,6 @@
     font-size: 0.8rem;
     color: #718096;
     font-weight: 400;
-  }
-}
-
-.active-indicator {
-  position: absolute;
-  top: -5px;
-  left: 50%;
-  transform: translateX(-50%);
-  
-  .active-pulse {
-    width: 8px;
-    height: 8px;
-    background: #667eea;
-    border-radius: 50%;
-    animation: pulse 2s infinite;
-  }
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.7);
-  }
-  70% {
-    transform: scale(1);
-    box-shadow: 0 0 0 10px rgba(102, 126, 234, 0);
-  }
-  100% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(102, 126, 234, 0);
   }
 }
 
@@ -242,7 +213,7 @@
     -webkit-appearance: none;
     appearance: none;
     width: 170px;
-    height: 10px;
+    height: 2px;
     background: #667eea;
     cursor: pointer;
     box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
@@ -252,7 +223,7 @@
   // Firefox
   &::-moz-range-thumb {
     width: 170px;
-    height: 10px;
+    height: 2px;
     background: #667eea;
     cursor: pointer;
     box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
@@ -272,22 +243,6 @@
     height: 2px;
     background: $strongViolet;
     border: none;
-  }
-}
-
-.carousel-counter {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #2d3748;
-  min-width: 60px;
-  text-align: center;
-  
-  .current-index {
-    color: #667eea;
-  }
-  
-  .total {
-    color: #a0aec0;
   }
 }
 

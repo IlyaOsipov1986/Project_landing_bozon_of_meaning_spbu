@@ -18,7 +18,6 @@
     padding-top: 65px;
 
     h1 {
-        @include font-lato;
         letter-spacing: -1px;
         @include base-80;
         @include regular-500;

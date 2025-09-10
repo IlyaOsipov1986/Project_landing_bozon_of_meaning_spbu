@@ -1,6 +1,6 @@
 import { useState, useRef, useCallback } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, FreeMode } from 'swiper/modules';
+import { Navigation, FreeMode, Mousewheel, Keyboard } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/free-mode';
@@ -13,55 +13,28 @@ const VKVideoCarousel = () => {
   const videos = [
     {
       id: 1,
-      title: "Что такое углеродная единица? Кому её можно продать, зачем это нужно, и почему в России она стоит так дешево?",
-      thumbnail: "https://vkvideo.ru/video_ext.php?oid=-218344798&id=456240203&hd=2&autoplay=1",
-      vkUrl: "https://vkvideo.ru/clip-218344798_456240203"
+      thumbnail: "https://vkvideo.ru/video_ext.php?oid=-218344798&id=456240194&hd=2&autoplay=0",
     },
     {
       id: 2,
-      title: "Соответствие",
-      author: "Предыдущая",
-      views: "8.7K",
-      duration: "1:15",
-      thumbnail: "https://via.placeholder.com/300x450/764ba2/ffffff?text=Video+2",
-      vkUrl: "https://vk.com/video-123456_456790"
+      thumbnail: "https://vkvideo.ru/video_ext.php?oid=-218344798&id=456240201&hd=2",
     },
     {
       id: 3,
-      title: "Определение",
-      author: "Внезапная дама или религия",
-      views: "15.2K",
-      duration: "0:32",
-      thumbnail: "https://via.placeholder.com/300x450/f093fb/ffffff?text=Video+3",
-      vkUrl: "https://vk.com/video-123456_456791"
+      thumbnail: "https://vkvideo.ru/video_ext.php?oid=-218344798&id=456240167&hd=2",
     },
     {
       id: 4,
-      title: "Истории путешествий",
-      author: "Путешественник",
-      views: "23.1K",
-      duration: "2:01",
-      thumbnail: "https://via.placeholder.com/300x450/f5576c/ffffff?text=Video+4",
-      vkUrl: "https://vk.com/video-123456_456792"
+      thumbnail: "https://vkvideo.ru/video_ext.php?oid=-218344798&id=456240182&hd=2",
     },
-    {
+     {
       id: 5,
-      title: "Утренний кофе",
-      author: "Кофеман",
-      views: "18.9K",
-      duration: "1:30",
-      thumbnail: "https://via.placeholder.com/300x450/4fd1c5/ffffff?text=Video+5",
-      vkUrl: "https://vk.com/video-123456_456793"
+      thumbnail: "https://vkvideo.ru/video_ext.php?oid=-218344798&id=456240167&hd=2",
     },
-    {
+     {
       id: 6,
-      title: "Вечерний закат",
-      author: "Природолюб",
-      views: "31.2K",
-      duration: "0:58",
-      thumbnail: "https://via.placeholder.com/300x450/ed8936/ffffff?text=Video+6",
-      vkUrl: "https://vk.com/video-123456_456794"
-    }
+      thumbnail: "https://vkvideo.ru/video_ext.php?oid=-218344798&id=456240170&hd=2",
+    },
   ];
 
   const handleSlideChange = useCallback((swiper) => {
@@ -81,15 +54,12 @@ const VKVideoCarousel = () => {
       <div className="carousel-container">
         <Swiper
           ref={swiperRef}
-          modules={[Navigation, FreeMode]}
+          modules={[Navigation, FreeMode, Mousewheel, Keyboard]}
           spaceBetween={20}
           slidesPerView={'auto'}
-          centeredSlides={true}
+          centeredSlides={false}
           freeMode={true}
-          navigation={{
-            nextEl: '.carousel-next',
-            prevEl: '.carousel-prev',
-          }}
+          effect="fade"
           onSlideChange={handleSlideChange}
           className="video-swiper"
         >
@@ -97,29 +67,20 @@ const VKVideoCarousel = () => {
             <SwiperSlide key={video.id} className="video-slide">
               <div className="video-card">
                 <div className="video-thumbnail">
-                  <img 
+                  <iframe
+                    width="100%"
+                    height="100%" 
                     src={video.thumbnail} 
                     alt={video.title}
                     className={index === activeIndex ? 'active' : ''}
-                  />
-                  <div className="video-overlay">
-                    <div className="play-icon">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
-                        <path d="M8 5v14l11-7z"/>
-                      </svg>
-                    </div>
-                  </div>
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    frameBorder="0"
+                    style={{
+                      border: 'none'
+                    }}
+                    ></iframe>
                 </div>
-                
-                <div className="video-info">
-                  <h3 className="video-title">{video.title}</h3>
-                </div>
-
-                {index === activeIndex && (
-                  <div className="active-indicator">
-                    <div className="active-pulse"></div>
-                  </div>
-                )}
               </div>
             </SwiperSlide>
           ))}

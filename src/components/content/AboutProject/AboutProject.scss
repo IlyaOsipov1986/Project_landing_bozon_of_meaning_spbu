@@ -16,7 +16,6 @@
 }
 
 .about-project__title {
-    @include font-lato;
     @include regular-500;
     @include base-75;
     margin-bottom: 82px;
