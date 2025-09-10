@@ -6,6 +6,19 @@
     justify-content: space-between;
     align-items: center;
     gap: 15px;
+
+    @media (max-width: $mobile) {
+       .row-left-right-buttons__btn-prev, .row-left-right-buttons__btn-next {
+            width: 45px;
+            height: 45px;
+
+            &:hover {
+                width: 45px;
+                height: 45px;
+            }
+       }
+
+    }
 }
 
 .row-left-right-buttons__btn-prev {

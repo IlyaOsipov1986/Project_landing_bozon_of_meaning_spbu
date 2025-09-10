@@ -1,0 +1,60 @@
+@use '../../../assets/styles/vars.scss' as *;
+@use '../../../assets/styles/mixins.scss' as *;
+
+.stories {
+    overflow: hidden;
+    margin-bottom: 150px;
+
+    @media (max-width: $tablet) {
+        margin-bottom: 70px;
+    }
+}
+
+.stories__container {
+    display: grid;
+    grid-template-columns: 485px auto;
+
+    @media (max-width: $tablet) {
+        grid-template-columns: 405px auto;
+    }
+
+    @media (max-width: $tablet-xs) {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+}
+
+.stories__title {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 65px;
+
+    h1 {
+        letter-spacing: -1px;
+        @include base-80;
+        @include regular;
+        line-height: 125%;
+        color: $violet;
+
+        @media (max-width: $tablet) {
+           @include base-60;
+        }
+    }
+
+    p {
+        color: $white;
+        @include base-16;
+        line-height: 25px;
+        @include light;
+        opacity: 70%;
+
+        @media (max-width: $mobile-s) {
+          @include base-14;
+        }
+    }
+
+    @media (max-width: $tablet) {
+        gap: 15px;
+    }
+}

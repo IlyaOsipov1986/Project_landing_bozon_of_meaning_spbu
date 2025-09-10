@@ -52,22 +52,22 @@ const Filming = () => {
                                 prevGroup={onHandleToggleArrowPrev}
                                 isNotActiveArrow={setNotActiveArrow}
                             />
-                            <div className="filming__main-title">
-                                <div className="filming__main-title-item-without-img">
-                                    <h1 style={{fontWeight: '500'}}>Съемки в</h1>
-                                </div>
-                                <div className="filming__main-title-item">
-                                    <h1 style={{fontWeight: '200', fontStyle: 'italic', letterSpacing: '-3px'}}>особняке</h1>
-                                    <img src={filmingImage_01} alt="image"/>
-                                </div>
-                                <div className="filming__main-title-item">
-                                    <img src={filmingImage_02} alt="image"/>
-                                    <h1 style={{fontWeight: '500'}}>Кельха</h1>
-                                </div>
-                            </div>
                         </div>
                         <div className="filming__main-desc">
                             <p>«Сделайте нечто... разнообразное, чтобы при одном только взгляде на здание дух захватывало» – с этих слов началась история особняка А.Ф. Кельха. Их произнесла Варвара Петровна Кельх (в девичестве Базанова) – представительница семьи сибирских золотопромышленников, владелица Ленских золотых приисков и Ленско-Витимского пароходства. В 1895 году она вместе с мужем Александром Фердинандовичем купила тот самый дом номер 28 на улице Чайковского. Только выглядел он тогда иначе, а экспрессивная фраза новой хозяйки стала заданием для архитекторов.</p>
+                        </div>
+                        <div className="filming__main-title">
+                            <div className="filming__main-title-item-without-img">
+                                <h1 style={{fontWeight: '400'}}>Съемки в</h1>
+                            </div>
+                            <div className="filming__main-title-item">
+                                <h1 style={{fontWeight: '200', fontStyle: 'italic', letterSpacing: '-3px'}}>особняке</h1>
+                                <img src={filmingImage_01} alt="image"/>
+                            </div>
+                            <div className="filming__main-title-item">
+                                <img src={filmingImage_02} alt="image"/>
+                                <h1 style={{fontWeight: '400'}}>Кельха</h1>
+                            </div>
                         </div>
                     </div>
                 </div>
