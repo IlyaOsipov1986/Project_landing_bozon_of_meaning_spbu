@@ -58,8 +58,15 @@ const VKVideoCarousel = () => {
           spaceBetween={20}
           slidesPerView={'auto'}
           centeredSlides={false}
-          freeMode={true}
-          effect="fade"
+          freeMode={{
+            enabled: true,
+            momentum: true,
+            momentumRatio: 1,
+            momentumBounce: true,
+            momentumBounceRatio: 1,
+            sticky: false,
+            minimumVelocity: 0.1
+          }}
           onSlideChange={handleSlideChange}
           className="video-swiper"
         >
@@ -73,7 +80,7 @@ const VKVideoCarousel = () => {
                     src={video.thumbnail} 
                     alt={video.title}
                     className={index === activeIndex ? 'active' : ''}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allow="accelerometer; fullscreen; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                     frameBorder="0"
                     style={{

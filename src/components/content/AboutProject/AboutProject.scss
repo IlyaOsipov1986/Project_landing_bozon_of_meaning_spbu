@@ -1,4 +1,4 @@
-@use '../../../assets/styles/vars.scss' as *;
+@use '../../../assets/styles/vars' as *;
 @use '../../../assets/styles/mixins' as *;
 
 .about-project {
@@ -7,6 +7,10 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url("../../../assets/img/aboutProjectImg.png");
+
+    @media (max-width: $tablet) {
+        margin-bottom: 70px;
+    }
 }
 
 .about-project__container {
@@ -19,6 +23,16 @@
     @include regular-500;
     @include base-75;
     margin-bottom: 82px;
+
+    @media (max-width: $tablet) {
+        margin-bottom: 70px;
+        @include base-60;
+    }
+
+    @media (max-width: $mobile) {
+        margin-bottom: 50px;
+        @include base-40;
+    }
 }
 
 .about-project__card-block {
@@ -27,6 +41,16 @@
     grid-template-rows: auto auto;
     row-gap: 36px;
     column-gap: 32px;
+
+    @media (max-width: $tablet) {
+       row-gap: 20px;
+       column-gap: 20px;
+    }
+
+    @media (max-width: $mobile) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+    }
 }
 
 .about-project__card_1 {
@@ -43,6 +67,25 @@
     border-radius: 30px;
     border: 1px solid $strongViolet;
     background: linear-gradient(#141321 0%, #2C2349 100%);
+
+    @media (max-width: $tablet) {
+        padding: 30px;
+        justify-content: space-between;
+        column-gap: 10px;
+    }
+
+    @media (max-width: $mobile) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px;
+        justify-content: space-between;
+        gap: 20px;
+        grid-column-start: 1; 
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
 }
 
 .about-project__card_2 {
@@ -59,6 +102,19 @@
     border-radius: 30px;
     border: 1px solid $strongViolet;
     background: linear-gradient(#141321 0%, #2C2349 100%);
+
+    @media (max-width: $tablet) {
+        padding: 30px;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    @media (max-width: $mobile) {
+        grid-column-start: 1; 
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
 }
 
 .about-project__card_3 {
@@ -74,7 +130,20 @@
     grid-row-end: 2;
     border-radius: 30px;
     border: 1px solid $strongViolet;
-    background: linear-gradient(#141321 0%, #2C2349 100%);    
+    background: linear-gradient(#141321 0%, #2C2349 100%); 
+    
+    @media (max-width: $tablet) {
+        padding: 30px;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    @media (max-width: $mobile) {
+        grid-column-start: 1; 
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
 }
 
 .about-project__card_title {
@@ -82,12 +151,21 @@
     @include font-yeseva-one;
     @include regular;
     line-height: 28px;
+
+    @media (max-width: $mobile) {
+        @include base-20;
+    }
 }
 
 .about-project__card_desc {
     @include base-16;
     line-height: 26px;
     @include light;
+
+    @media (max-width: $mobile) {
+        @include base-14;
+        line-height: 22px;
+    }  
 }
 
 .about-project__card_icon {
@@ -96,6 +174,11 @@
     img {
         width: 60px;
         height: 60px;
+
+        @media (max-width: $mobile) {
+            width: 50px;
+            height: 50px;
+        }  
     }
 }
 

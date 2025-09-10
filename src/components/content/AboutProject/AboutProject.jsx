@@ -31,7 +31,7 @@ const AboutProject = () => {
                             <img src={aboutProjectDataCards[2]?.icon} alt=""/>
                         </div>
                         <p className="about-project__card_desc">{aboutProjectDataCards[2]?.desc}</p>
-                        <div className="about-project__card_link_btn"/>
+                        <a className="about-project__card_link_btn" href="https://vk.com/v_nauke" target="_blank" rel="noopener noreferrer"/>
                     </div>
                 </div>
             </Container>
