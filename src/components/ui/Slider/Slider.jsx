@@ -16,7 +16,7 @@ const Slider = () => {
                     <div className="slider-block__logo-item-icon"/>
                     <div className="slider-block__logo-item-desc">
                         <p>Живое обсуждение научных достижений и их роли в будущем человечества.</p>
-                        <p style={{textAlign: 'center'}}>Новое дискуссионное шоу с лауреатом ТЭФИ <b>Романом Герасимовым</b>.</p>
+                        <p>Новое дискуссионное шоу с лауреатом ТЭФИ <b>Романом Герасимовым</b>.</p>
                     </div>
                 </div>
             </div>

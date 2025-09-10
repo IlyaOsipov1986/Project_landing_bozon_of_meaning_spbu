@@ -1,18 +1,20 @@
 import "./Header.scss";
 import Nav from "./Nav";
-import { Link } from "react-router-dom";
+import MobileMenu from "../../../components/layout/Header/MobileMenu/MobileMenu";
+import BurgerButton from "./MobileMenu/BurgerButton.jsx";
 import logoBozon from "../../../assets/img/icons/headerIcon.svg";
-// import useMobile from "../../../utils/hooks/useMobile.js";
-// import useClickOutside from "../../../utils/hooks/useClickOutside.js";
+import useMobile from "../../../utils/hooks/useMobile.js";
+import useClickOutside from "../../../utils/hooks/useClickOutside.js";
 
 const Header = () => {
-  // const {
-  //     ref: menuRef,
-  //     isOpened: mobileMenuShown,
-  //     setIsOpened: setMobileMenuShown,
-  // } = useClickOutside();
 
-  // const isMobile = useMobile('1200px');
+  const {
+      ref: menuRef,
+      isOpened: mobileMenuShown,
+      setIsOpened: setMobileMenuShown,
+  } = useClickOutside();
+
+  const isMobile = useMobile('1000px');
 
   const scrollToElement = (elementId, offset = 0) => {
     console.log(elementId)
@@ -31,28 +33,27 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header-container">
+        {isMobile && <img className="header__logo" src={logoBozon} alt="Бозон смысла" />}
         <div className="header__block">
           <div style={{display: 'flex'}}>
            <img className="header__logo" src={logoBozon} alt="Бозон смысла" />
           </div>
           <Nav onHandleClick={scrollToElement}/>
         </div>
-        {/* <div className='header-link__block'>
-                    {isMobile &&
-                        <BurgerButton
-                            mobileMenuShown={mobileMenuShown}
-                            setMobileMenuShown={setMobileMenuShown}
-                        />
-                    }
-                </div> */}
+        {isMobile &&
+          <BurgerButton
+              mobileMenuShown={mobileMenuShown}
+              setMobileMenuShown={setMobileMenuShown}
+          />
+        }
       </div>
-      {/* {isMobile &&
-                <MobileMenu
-                    menuRef={menuRef}
-                    mobileMenuShown={mobileMenuShown}
-                    setMobileMenuShown={setMobileMenuShown}
-                />
-            } */}
+      {isMobile &&
+        <MobileMenu
+            menuRef={menuRef}
+            mobileMenuShown={mobileMenuShown}
+            setMobileMenuShown={setMobileMenuShown}
+        />
+      }
     </header>
   );
 };

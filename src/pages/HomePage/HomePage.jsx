@@ -8,9 +8,9 @@ const HomePage = () => {
     return (
         <main className="main main-overflow-hidden">
            <Slider/>
-           <AboutProject/>
+           {/* <AboutProject/>
            <Filming/>
-           <Stories/>
+           <Stories/> */}
         </main>
     )
 }
