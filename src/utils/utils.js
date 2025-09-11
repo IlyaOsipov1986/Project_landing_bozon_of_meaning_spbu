@@ -8,3 +8,16 @@ export const findFirstElemLastElemForShowArrow = (initialArray, modifiedArray) =
 
     return { isLeftArrow, isRightArrow };
 }
+
+export const scrollToElement = (elementId, offset = 0) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition - offset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        })
+    }
+}

@@ -142,6 +142,10 @@
     @media (max-width: $tablet-xs) {
         top: -260px;
     }
+
+    @media (max-width: $mobile-s) {
+        top: -230px;
+    }
 }
 
 .filming__main-title-item-without-img {
@@ -157,6 +161,16 @@
     gap: 25px;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: $mobile-s) {
+        gap: 10px;
+    }
+
+    img {
+        @media (max-width: $mobile-s) {
+          width: 180px;
+        }
+    }
 }
 
 .filming__main-desc {

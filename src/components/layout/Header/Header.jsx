@@ -5,6 +5,7 @@ import BurgerButton from "./MobileMenu/BurgerButton.jsx";
 import logoBozon from "../../../assets/img/icons/headerIcon.svg";
 import useMobile from "../../../utils/hooks/useMobile.js";
 import useClickOutside from "../../../utils/hooks/useClickOutside.js";
+import {scrollToElement} from "../../../utils/utils.js";
 
 const Header = () => {
 
@@ -15,20 +16,6 @@ const Header = () => {
   } = useClickOutside();
 
   const isMobile = useMobile('1000px');
-
-  const scrollToElement = (elementId, offset = 0) => {
-    console.log(elementId)
-    const element = document.getElementById(elementId);
-    if (element) {
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition - offset;
-
-      window.scrollTo({
-         top: offsetPosition,
-         behavior: 'smooth' 
-      })
-    }
-  }
 
   return (
     <header className="header">

@@ -47,7 +47,7 @@ export const filmingDataImages = [
 
 export const speakersData = [
     {
-    id: 0,
+    id: 1,
     image: speakersImage_01,
     name: 'Константин Амелин',
     jobTitle: 'Кандидат физико-математических наук, Директор Центр искусственного интеллекта СПбГУ',
@@ -55,27 +55,27 @@ export const speakersData = [
     addClass: 'speakers__circle-image_1'  
   },
   {
-    id: 1,
-    image: speakersImage_02,
-    name: '',
-    jobTitle: '',
-    bio: '',
-     addClass: 'speakers__circle-image_2'  
-  },
-  {
     id: 2,
-    image: speakersImage_03,
-    name: '',
-    jobTitle: '',
-    bio: '',
-     addClass: 'speakers__circle-image_3'  
+    image: speakersImage_02,
+    name: 'Мария Ветрова',
+    jobTitle: 'Кандидат экономических наук, доцент СПбГУ',
+    bio: 'Описание будет позже',
+    addClass: 'speakers__circle-image_2'
   },
   {
     id: 3,
+    image: speakersImage_03,
+    name: 'Ирина Тимофеева',
+    jobTitle: 'Профессор СПбГУ, лауреат премии Президента России в области науки и инноваций для молодых учёных',
+    bio: 'Описание будет позже',
+    addClass: 'speakers__circle-image_3'
+  },
+  {
+    id: 4,
     image: speakersImage_04,
-    name: '',
-    jobTitle: '',
-    bio: '',
-     addClass: 'speakers__circle-image_4'  
+    name: 'Ольга Якубович',
+    jobTitle: 'Кандидат геолого-минералогических наук, профессор СПбГУ, лауреат премии Президента Российской Федерации в области науки и инноваций для молодых ученых',
+    bio: 'Описание будет позже',
+    addClass: 'speakers__circle-image_4'
   }
 ]

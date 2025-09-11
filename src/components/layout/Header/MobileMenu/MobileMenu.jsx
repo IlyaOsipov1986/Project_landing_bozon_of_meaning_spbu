@@ -3,7 +3,8 @@ import classNames from "classnames";
 import Nav from "../Nav.jsx";
 import closeIcon from "../../../../assets/img/icons/closeIconWhiteBtn.svg";
 import logotypeIIcentreMobile from "../../../../assets/img/icons/headerIcon.svg";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import {scrollToElement} from "../../../../utils/utils.js";
 
 const MobileMenu = (props) => {
 
@@ -28,7 +29,10 @@ const MobileMenu = (props) => {
             </div>
             <Nav
                 isMobileActive={true}
-                onHandleClick={() => setMobileMenuShown(false)}
+                onHandleClick={(el) => {
+                    setMobileMenuShown(false)
+                    scrollToElement(el)
+                }}
             />
         </section>
     )
