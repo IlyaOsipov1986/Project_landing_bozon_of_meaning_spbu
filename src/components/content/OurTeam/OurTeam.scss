@@ -1,3 +1,82 @@
 @use '../../../assets/styles/vars.scss' as *;
 @use '../../../assets/styles/mixins.scss' as *;
 
+.our-team {
+  margin-bottom: 100px;
+}
+
+.our-team__container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  h1 {
+    @include regular;
+    color: $blue;
+    @include base-70;
+  }
+}
+
+.our-team__title {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.our-team__team {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 16px;
+}
+
+.our-team__team-item {
+  display: grid;
+  grid-template-rows: 400px 250px;
+  row-gap: 50px;
+}
+
+.our-team__team-img {
+  display: flex;
+  align-items: end;
+  position: relative;
+
+  img {
+    object-fit: contain;
+    width: 100%;
+  }
+}
+
+.our-team__team-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  height: 100%;
+
+  p {
+    @include light;
+    opacity: 70%;
+    @include base-16;
+    line-height: 25px;
+  }
+}
+
+.our-team__team-info-name {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  h5 {
+    @include regular;
+    line-height: 28px;
+    @include base-25;
+  }
+
+  span {
+    @include light;
+    @include base-16;
+    color: $blue;
+    opacity: 70%;
+  }
+}

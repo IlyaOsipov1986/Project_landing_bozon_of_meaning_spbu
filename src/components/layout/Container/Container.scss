@@ -43,6 +43,26 @@
   }
 }
 
+.container_size_large-m {
+  width: 1416px;
+  max-width: 100%;
+  margin: 0 auto;
+  // padding: 0 50px;
+  // box-sizing: border-box;
+
+  @media (max-width: $laptop) {
+    padding: 0 40px;
+  }
+
+  @media (max-width: $mobile) {
+    width: 100%;
+  }
+
+  @media (max-width: $mobile-s) {
+    padding: 0 15px;
+  }
+}
+
 .container__add-border {
     border-right: 1px solid var(--primary-border-color);
     border-left: 1px solid var(--primary-border-color);
