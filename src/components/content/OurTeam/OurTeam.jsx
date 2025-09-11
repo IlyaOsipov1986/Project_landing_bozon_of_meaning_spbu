@@ -1,6 +1,8 @@
 import  "./OurTeam.scss";
+import React from "react";
 import Container from "../../layout/Container/Container.jsx";
 import { teamData } from "../../../config.js";
+import OurTeamCard from "./OurTeamCard.jsx";
 
 const OurTeam = () => {
 
@@ -14,23 +16,15 @@ const OurTeam = () => {
                     <div className="our-team__team">
                         {teamData.map((item) => {
                           return (
-                              <div key={item.id} className="our-team__team-item">
-                                <div className="our-team__team-img">
-                                    <img src={item.image} alt="" />
-                                </div>
-                                <div className="our-team__team-info">
-                                    <div className="our-team__team-info-name">
-                                        <h5><i style={{ fontWeight: 100 }}>{item.name} </i>{item.secondName}</h5>
-                                        <span>{item.jobTitle}</span>
-                                    </div>
-                                    <p>{item.bio}</p>
-                                </div>
-                              </div>
+                              <React.Fragment key={item.id}>
+                                  <OurTeamCard
+                                      item={item}
+                                  />
+                              </React.Fragment>
                           )})}
                     </div>
                 </div>
             </Container>
-
         </section>
     )
 }
