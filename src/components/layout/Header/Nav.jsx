@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { headerLinks } from './headerLinks';
 
 const Nav = ({ onHandleClick = () => {} }) => {
@@ -8,9 +7,9 @@ const Nav = ({ onHandleClick = () => {} }) => {
             <ul>
             {headerLinks.map((link) => (
                 <li key={link.id}>
-                    <Link className="link" onClick={() => onHandleClick(link.link)}>
+                    <a className="link" onClick={() => onHandleClick(link.link)}>
                         {link.title}
-                    </Link>
+                    </a>
                 </li>
             ))}
             </ul>

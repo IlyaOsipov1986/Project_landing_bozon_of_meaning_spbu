@@ -3,6 +3,7 @@ import AboutProject from "../../components/content/AboutProject/AboutProject";
 import Filming from "../../components/content/Filming/Filming";
 import Stories from "../../components/content/Stories/Stories";
 import Speakers from "../../components/content/Speakers/Speakers";
+import OurTeam from "../../components/content/OurTeam/OurTeam.jsx";
 
 const HomePage = () => {
 
@@ -13,6 +14,7 @@ const HomePage = () => {
            <Filming/>
            <Stories/>
            <Speakers/>
+           <OurTeam/>
         </main>
     )
 }

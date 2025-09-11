@@ -11,6 +11,10 @@
     grid-template-rows: 660px;
     align-items: center;
     column-gap: 70px;
+
+    @media (max-width: $tablet) {
+      grid-template-columns: 1fr;
+    }
 }
 
 .speakers__images-wrap {
@@ -26,6 +30,17 @@
     right: 0;
     width: 600px;
     height: 600px;
+
+  @media (max-width: $tablet) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @media (max-width: $mobile) {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .speakers__images-bg {
@@ -44,18 +59,39 @@
   align-items: center;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+
+  &.active {
+    box-shadow: 0 20px 80px $violet;
+    transform: scale(1.1);
+    cursor: default;
+  }
+
+  @media (max-width: $mobile-s) {
+    width: 130px;
+    height: 130px;
+  }
 }
 
 .speakers__circle-image_1 {
     position: absolute;
     right: 70px;
     top: 80px;
+
+  @media (max-width: $mobile) {
+    right: 0;
+    top: 80px;
+  }
 }
 
 .speakers__circle-image_2 {
     position: absolute;
     bottom: 40px;
     right: 160px;
+
+  @media (max-width: $mobile) {
+    bottom: 40px;
+    right: 0;
+  }
 }
 
 .speakers__circle-image_3 {
@@ -68,6 +104,10 @@
     position: absolute;
     top: 30px;
     left: 100px;
+
+  @media (max-width: $mobile) {
+    left: 0;
+  }
 }
 
 .speakers__circle-image img {
@@ -93,6 +133,10 @@
         @include light;
         opacity: 70%;
     }
+
+  @media (max-width: $mobile-s) {
+    gap: 30px;
+  }
 }
 
 .speakers__desc-speaker__name {
@@ -105,6 +149,10 @@
         @include regular;
         font-style: italic;
         line-height: 28px;
+
+      @media (max-width: $mobile-s) {
+        text-align: center;
+      }
     }
 
     span {
@@ -112,5 +160,9 @@
         line-height: 25px;
         @include light;
         color: $blue;
+
+      @media (max-width: $mobile-s) {
+        text-align: center;
+      }
     }
 }

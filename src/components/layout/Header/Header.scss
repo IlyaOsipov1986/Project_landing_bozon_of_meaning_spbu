@@ -60,6 +60,7 @@
   a {
     @include base-16;
     color: $white;
+    cursor: pointer;
   }
 
   @media (max-width: $tablet-xs) {

@@ -5,7 +5,7 @@ const Container = (props) => {
   const {
     children,
     addClass = "",
-    size = "default", // default, large
+    size = "default", // default, large, large-m
   } = props;
 
   const containerClass = classNames({
