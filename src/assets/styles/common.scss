@@ -114,3 +114,10 @@ img {
     color: $violet;
   }
 }
+
+.custom-loader-wrap {
+  display: flex;
+  padding: 40px;
+  justify-content: center;
+  min-height: 510px;
+} 

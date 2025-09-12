@@ -1,0 +1,71 @@
+@use '../../../assets/styles/vars.scss' as *;
+@use '../../../assets/styles/mixins.scss' as *;
+
+.issues {
+    margin-bottom: 308px;
+}
+
+.issues__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.issues__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 50px;
+
+    h1 {
+        color: $blue;
+        line-height: 125%;
+        @include base-70;
+        @include regular;
+    }
+
+    p {
+        @include base-16;
+        line-height: 26px;
+        letter-spacing: 0%;
+        opacity: 70%;
+    }
+}
+
+.issues__tabs {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 40px;    
+}
+
+.issues__tabs-item {
+    padding: 10px 16px;
+    color: $violet;
+    @include base-16;
+    line-height: 20px;
+    @include light;
+    border: 1px solid $violet;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all .3s ease;
+
+    &:hover {
+        background-color: $violet;
+        color: $white;
+    }
+
+    &.active {
+        background-color: $violet;
+        color: $white;
+        pointer-events: none;
+        cursor: default;
+    }
+}
+
+.issues__video-content {
+    display: flex;
+    width: 100%;
+    height: 657px;
+}

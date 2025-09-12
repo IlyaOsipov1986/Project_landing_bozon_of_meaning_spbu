@@ -19,9 +19,19 @@
 
 .speakers__images-wrap {
     display: flex;
+    align-items: center;
+    justify-content: end;
     width: 100%;
     height: 100%;
     position: relative;
+
+    h1 {
+        @include base-70;
+        @include regular;
+        line-height: 125%;
+        letter-spacing: -1px;
+        z-index: 55;
+    }
 }
 
 .speakers__images__bg-wrap {

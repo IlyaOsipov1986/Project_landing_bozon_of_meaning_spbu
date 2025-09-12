@@ -54,6 +54,10 @@
       img {
        position: absolute;
         bottom: -40px;
+
+          @media (max-width: $tablet) {
+            bottom: -10px;
+         }
       }
     }
   }
@@ -147,9 +151,9 @@
   @include light;
   opacity: 90%;
   @include base-16;
-  line-height: 25p;
+  line-height: 25px;
   border: 1px solid $violet;
-  background: $strongBlack;
+  background: $middle-black;
   border-top-left-radius: 30px;
   border-bottom-right-radius: 30px;
 
