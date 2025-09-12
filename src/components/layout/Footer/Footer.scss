@@ -62,6 +62,11 @@
     @include base-25;
     text-decoration: underline;
     @include regular;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: $violet;
+    }
 
     @media (max-width: $mobile) {
       @include base-20;
