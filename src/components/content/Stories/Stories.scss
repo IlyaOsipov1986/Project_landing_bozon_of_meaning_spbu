@@ -40,6 +40,10 @@
         @media (max-width: $tablet) {
            @include base-60;
         }
+
+        @media (max-width: $mobile) {
+           @include base-40;
+        }
     }
 
     p {

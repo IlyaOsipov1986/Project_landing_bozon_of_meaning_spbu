@@ -72,6 +72,10 @@ img {
   grid-template-columns: 100%;
   background-color: $black;
   color: $white;
+  background-image: url("../img/footerMainImage.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .main {
@@ -114,3 +118,14 @@ img {
     color: $violet;
   }
 }
+
+.custom-loader-wrap {
+  display: flex;
+  padding: 40px;
+  justify-content: center;
+  min-height: 657px;
+
+  @media (max-width: $mobile) {
+    height: 400px;
+  }
+} 

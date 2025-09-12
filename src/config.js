@@ -127,3 +127,45 @@ export const teamData = [
     addClass: 'our-team__team-item_4'
   }
 ]
+
+export const issuesTabs = [
+  {
+    id: 1, 
+    title: 'Бозон смысла: эпизод 1'
+  }, 
+  {
+    id: 2, 
+    title: 'Бозон смысла: эпизод 2'
+  }, 
+  {
+    id: 3, 
+    title: 'Бозон смысла: эпизод 3'
+  }, 
+  {
+    id: 4, 
+    title: 'Бозон смысла: эпизод 4'
+  }
+];
+
+export const issuesVideoData = [
+  {
+    id: 1,
+    title: 'Бозон смысла: эпизод 1',
+    videoLink: 'https://vkvideo.ru/video_ext.php?oid=-218344798&id=456240060&hd=1'
+  },
+  {
+    id: 2,
+    title: 'Бозон смысла: эпизод 2',
+    videoLink: 'https://vkvideo.ru/video_ext.php?oid=-218344798&id=456240114&hd=2'
+  },
+  {
+    id: 3,
+    title: 'Бозон смысла: эпизод 3',
+    videoLink: 'https://vkvideo.ru/video_ext.php?oid=-218344798&id=456240179&hd=1'
+  },
+  {
+    id: 4,
+    title: 'Бозон смысла: эпизод 4',
+    videoLink: 'https://vkvideo.ru/video_ext.php?oid=-218344798&id=456240197&hd=2'
+  }
+]

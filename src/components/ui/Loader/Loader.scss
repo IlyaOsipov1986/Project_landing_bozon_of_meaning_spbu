@@ -1,0 +1,82 @@
+@use "../../../assets/styles/vars" as *;
+
+.loader {
+  display: flex;
+  align-items: center;
+}
+
+.loader__bar {
+  display: inline-block;
+  width: 3px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  animation: scale-up4 1s linear infinite;
+}
+
+.loader__bar:nth-child(2) {
+  height: 25px;
+  margin: 0 5px;
+  animation-delay: 0.25s;
+}
+
+.loader__bar:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+@keyframes scale-up4 {
+  20% {
+    background-color: #ffff;
+    transform: scaleY(1.5);
+  }
+
+  40% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes scale-up4-blue {
+  20% {
+    background-color: $primary700;
+    transform: scaleY(1.5);
+  }
+
+  40% {
+    transform: scaleY(1);
+  }
+}
+
+.loader_lg {
+  padding: 25px;
+  justify-content: center;
+}
+
+.loader_black {
+  .loader__bar {
+    background-color: rgba($violet, 0.5);
+    animation: scale-up4-blue 1s linear infinite;
+  }
+  .loader__bar:nth-child(2) {
+    height: 55px;
+    margin: 0 10px;
+    animation-delay: 0.25s;
+  }
+
+  .loader__bar:nth-child(3) {
+    animation-delay: 0.5s;
+  }
+}
+
+.custom-loader-card__wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.9); /* полупрозрачный фон */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  z-index: 55;
+}

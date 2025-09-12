@@ -3,22 +3,16 @@
 
 .our-team {
   margin-bottom: 100px;
+
+   @media (max-width: $mobile) {
+    margin-bottom: 80px;
+  }
 }
 
 .our-team__container {
   display: flex;
   flex-direction: column;
   gap: 30px;
-
-  h1 {
-    @include regular;
-    color: $blue;
-    @include base-70;
-
-    @media (max-width: $tablet) {
-      @include base-60;
-    }
-  }
 
   @media (max-width: $tablet) {
     gap: 20px;
@@ -29,6 +23,24 @@
   display: flex;
   width: 100%;
   justify-content: flex-end;
+
+  h1 {
+    @include regular;
+    color: $blue;
+    @include base-70;
+
+    @media (max-width: $tablet) {
+      @include base-60;
+    }
+
+    @media (max-width: $mobile) {
+      @include base-40;
+    }
+  }
+
+  @media (max-width: $tablet-xs) {
+    justify-content: center;
+  }
 }
 
 .our-team__team {
@@ -52,8 +64,12 @@
     .our-team__team-img {
 
       img {
-       position: absolute;
+        position: absolute;
         bottom: -40px;
+
+          @media (max-width: $tablet) {
+            bottom: -10px;
+         }
       }
     }
   }
@@ -81,6 +97,10 @@
       object-fit: cover;
       width: 200px;
     }
+  }
+
+  @media (max-width: $tablet-xs) {
+    justify-content: center;
   }
 }
 
@@ -115,6 +135,10 @@
     color: $blue;
     opacity: 100%;
   }
+
+  @media (max-width: $tablet-xs) {
+    align-items: center;
+  }
 }
 
 .our-team__team-info-bio-with-gradient {
@@ -147,9 +171,9 @@
   @include light;
   opacity: 90%;
   @include base-16;
-  line-height: 25p;
+  line-height: 25px;
   border: 1px solid $violet;
-  background: $strongBlack;
+  background: $middle-black;
   border-top-left-radius: 30px;
   border-bottom-right-radius: 30px;
 

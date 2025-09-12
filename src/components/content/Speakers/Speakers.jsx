@@ -27,6 +27,7 @@ const Speakers = () => {
             <Container>
                 <div className="speakers__container">
                     <div className="speakers__images-wrap">
+                        <h1>Спикеры</h1>
                         <div className="speakers__images__bg-wrap">
                             {speakersData.map((card) => {
                             return(

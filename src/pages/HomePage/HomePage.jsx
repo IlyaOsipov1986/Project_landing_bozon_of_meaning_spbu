@@ -3,7 +3,8 @@ import AboutProject from "../../components/content/AboutProject/AboutProject";
 import Filming from "../../components/content/Filming/Filming";
 import Stories from "../../components/content/Stories/Stories";
 import Speakers from "../../components/content/Speakers/Speakers";
-import OurTeam from "../../components/content/OurTeam/OurTeam.jsx";
+import OurTeam from "../../components/content/OurTeam/OurTeam";
+import Issues from "../../components/content/Issues/Issues";
 
 const HomePage = () => {
 
@@ -15,6 +16,7 @@ const HomePage = () => {
            <Stories/>
            <Speakers/>
            <OurTeam/>
+           <Issues/>
         </main>
     )
 }
