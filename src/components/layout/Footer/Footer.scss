@@ -1,13 +1,100 @@
-@use "../../../assets/styles/vars.scss";
-@use "../../../assets/styles/mixins.scss";
+@use "../../../assets/styles/vars.scss" as *;
+@use "../../../assets/styles/mixins.scss" as *;
 
 .footer-container {
   display: grid;
-  grid-template: 280px 63px / auto repeat(3, 383px) auto;
-  margin: 0 auto;
+  grid-template-columns: 1fr;
+  padding-bottom: 40px;
   box-sizing: border-box;
+  width: 1492px;
   max-width: 100%;
-  width: 1756px;
-  border-top: 1px solid var(--primary-border-color);
-  padding: 0 15px;
+  margin: 0 auto;
+
+  @media (max-width: $laptop) {
+    padding: 0 40px 40px 40px;
+  }
+
+  @media (max-width: $mobile) {
+    width: 100%;
+  }
+
+  @media (max-width: $mobile-s) {
+    padding: 0 15px 30px 15px;
+  }
+}
+
+.footer__mail {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 35px;
+
+  p {
+    @include base-16;
+    line-height: 25px;
+    @include light;
+    opacity: 70%;
+  }
+
+  a {
+    @include base-50;
+    line-height: 60px;
+
+    @media (max-width: $mobile) {
+       @include base-40;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    margin-bottom: 10px;
+  }
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 45px 0;
+  border-bottom: 1px solid $violet;
+  margin-bottom: 50px;
+
+  a {
+    @include base-25;
+    text-decoration: underline;
+    @include regular;
+
+    @media (max-width: $mobile) {
+      @include base-20;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    padding: 30px 0;
+    margin-bottom: 30px;
+  }
+}
+
+.footer__logo {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  p {
+    @include base-16;
+    line-height: 25px;
+    @include light;
+  }
+
+  @media (max-width: $mobile) {
+   gap: 20px;
+  }
+}
+
+.footer__logo-wrap {
+ display: flex;
+ 
+ img {
+  width: 100%;
+  object-fit: cover;
+ }
 }

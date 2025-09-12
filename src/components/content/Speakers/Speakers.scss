@@ -31,6 +31,18 @@
         line-height: 125%;
         letter-spacing: -1px;
         z-index: 55;
+
+          @media (max-width: $tablet) {
+           @include base-60;
+        }
+
+         @media (max-width: $mobile) {
+           @include base-40;
+        }
+    }
+
+    @media (max-width: $mobile) {
+      justify-content: center;
     }
 }
 
