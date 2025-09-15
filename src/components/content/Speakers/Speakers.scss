@@ -86,6 +86,7 @@
     box-shadow: 0 20px 80px $violet;
     transform: scale(1.1);
     cursor: default;
+    pointer-events: none;
   }
 
   @media (max-width: $mobile-s) {
@@ -101,7 +102,7 @@
 
   @media (max-width: $mobile) {
     right: 0;
-    top: 80px;
+    top: 100px;
   }
 }
 
@@ -111,7 +112,7 @@
     right: 160px;
 
   @media (max-width: $mobile) {
-    bottom: 40px;
+    bottom: 100px;
     right: 0;
   }
 }
@@ -129,6 +130,7 @@
 
   @media (max-width: $mobile) {
     left: 0;
+    top: 50px;
   }
 }
 

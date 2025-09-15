@@ -1,5 +1,6 @@
 import { useState, useRef, useCallback } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import useMobile from "../../../utils/hooks/useMobile";
 import { Navigation, FreeMode, Mousewheel, Keyboard } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -9,6 +10,7 @@ import './VideoGalleryCarousel.scss';
 const VideoGalleryCarousel= () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const swiperRef = useRef(null);
+  const isMobile = useMobile('1005px');
 
   const videos = [
     {
@@ -58,12 +60,19 @@ const VideoGalleryCarousel= () => {
           spaceBetween={20}
           slidesPerView={'auto'}
           centeredSlides={false}
+          loop={isMobile ? true : false}
           navigation={{
             nextEl: '.carousel-next',
             prevEl: '.carousel-prev',
           }}
           freeMode={{
-            enabled: true
+            enabled: true,
+            momentum: true,
+            momentumRatio: 1,
+            momentumBounce: true,
+            momentumBounceRatio: 1,
+            sticky: false,
+            minimumVelocity: 0.1
           }}
           onSlideChange={handleSlideChange}
           className="video-swiper"
