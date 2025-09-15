@@ -8,8 +8,19 @@
 }
 
 .carousel-container {
-  position: relative;
   margin-bottom: 40px;
+
+  .carousel-nav {
+    display: none;
+
+    @media (max-width: $tablet-xs) {
+     display: flex;
+   }
+  }
+  
+  @media (max-width: $mobile) {
+    margin-bottom: 20px;
+  }
 }
 
 .video-swiper {
@@ -144,7 +155,7 @@
 
 .carousel-nav {
   position: absolute;
-  top: 50%;
+  top: 300px;
   transform: translateY(-50%);
   width: 48px;
   height: 48px;
@@ -166,11 +177,11 @@
   }
 
   &.carousel-prev {
-    left: -24px;
+    left: -20px;
   }
 
   &.carousel-next {
-    right: -24px;
+    right: -20px;
   }
 
   &.swiper-button-disabled {
@@ -190,6 +201,10 @@
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
+
+  @media (max-width: $tablet-xs) {
+   display: none;
+  }
 }
 
 .range-container {
@@ -269,11 +284,11 @@
     height: 40px;
     
     &.carousel-prev {
-      left: -20px;
+      left: -10px;
     }
     
     &.carousel-next {
-      right: -20px;
+      right: -10px;
     }
   }
 
