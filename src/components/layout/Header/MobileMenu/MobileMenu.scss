@@ -18,7 +18,7 @@
   right: -390px;
   z-index: 9;
   background-color: $black;
-  border: 1px solid var(--primary-border-color);
+  border: 1px solid $strongViolet;
   box-shadow: 0 0 18px rgba(0, 0, 0, 0.04);
   max-width: 100%;
   width: 390px;
@@ -42,7 +42,7 @@
   justify-content: space-between;
   height: 100px;
   padding: 0 20px;
-  border-bottom: 1px solid var(--primary-border-color);
+  border-bottom: 1px solid $strongViolet;
   background-color: $black;
 }
 
@@ -78,7 +78,7 @@
   justify-content: center;
   height: 100px;
   width: 100%;
-  border-bottom: 1px solid var(--primary-border-color);
+  border-bottom: 1px solid $strongViolet;
   background-color: $black;
   @include base-20;
 }
