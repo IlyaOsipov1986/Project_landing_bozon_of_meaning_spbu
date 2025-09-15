@@ -8,11 +8,16 @@
     @media (max-width: $tablet) {
         margin-bottom: 70px;
     }
+
+    @media (max-width: $mobile) {
+        margin-bottom: 20px;
+    }
 }
 
 .stories__container {
     display: grid;
     grid-template-columns: 485px auto;
+    position: relative;
 
     @media (max-width: $tablet) {
         grid-template-columns: 405px auto;

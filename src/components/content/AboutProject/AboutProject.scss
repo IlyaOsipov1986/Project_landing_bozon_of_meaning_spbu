@@ -11,6 +11,10 @@
     @media (max-width: $tablet) {
         margin-bottom: 70px;
     }
+
+    @media (max-width: $mobile) {
+        margin-bottom: 10px;
+    }
 }
 
 .about-project__container {
@@ -30,7 +34,7 @@
     }
 
     @media (max-width: $mobile) {
-        margin-bottom: 50px;
+        margin-bottom: 30px;
         @include base-40;
     }
 }
@@ -69,7 +73,7 @@
     background: linear-gradient(#141321 0%, #2C2349 100%);
 
     @media (max-width: $tablet) {
-        padding: 30px;
+        padding: 20px;
         justify-content: space-between;
         column-gap: 10px;
     }
@@ -78,7 +82,7 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        padding: 30px;
+        padding: 20px;
         justify-content: space-between;
         gap: 20px;
         grid-column-start: 1; 
@@ -104,7 +108,7 @@
     background: linear-gradient(#141321 0%, #2C2349 100%);
 
     @media (max-width: $tablet) {
-        padding: 30px;
+        padding: 20px;
         justify-content: space-between;
         gap: 20px;
     }
@@ -133,7 +137,7 @@
     background: linear-gradient(#141321 0%, #2C2349 100%); 
     
     @media (max-width: $tablet) {
-        padding: 30px;
+        padding: 20px;
         justify-content: space-between;
         gap: 20px;
     }
@@ -151,6 +155,7 @@
     @include font-yeseva-one;
     @include regular;
     line-height: 28px;
+    z-index: 5;
 
     @media (max-width: $mobile) {
         @include base-20;
