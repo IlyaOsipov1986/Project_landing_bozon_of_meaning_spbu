@@ -151,11 +151,11 @@
     gap: 42px;
 
     p {
-        color: $white;
-        line-height: 25px;
-        @include base-16;
-        @include light;
-        opacity: 70%;
+      color: $white;
+      line-height: 25px;
+      @include base-16;
+      @include light;
+      opacity: 70%;
     }
 
   @media (max-width: $mobile-s) {
