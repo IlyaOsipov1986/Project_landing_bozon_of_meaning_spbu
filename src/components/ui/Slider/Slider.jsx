@@ -1,7 +1,6 @@
 import "../Slider/Slider.scss";
-import sliderImageOne from "../../../assets/img/headerMainImage.png";
-// import sliderIconOne from "../../../assets/img/icons/sliderIconOne.svg";
-// import sliderIconTwo from "../../../assets/img/icons/sliderIconTwo.svg";
+// import sliderImageOne from "../../../assets/img/headerMainImage.png";
+import bgSliderLayout from "../../../assets/img/bgSliderLayout.png";
 
 const Slider = () => {
 
@@ -22,7 +21,7 @@ const Slider = () => {
             </div>
             <div className="slider-headline__wrap">
                 <div className="slider-headline__image">
-                    <img src={sliderImageOne} 
+                    <img src={bgSliderLayout} 
                         style={{
                             backgroundRepeat: 'no-repeat',
                             backgroundSize: 'cover',
