@@ -15,27 +15,27 @@ const VideoGalleryCarousel= () => {
   const videos = [
     {
       id: 1,
-      thumbnail: "https://vkvideo.ru/video_ext.php?oid=-218344798&id=456240194&hd=2&autoplay=0",
+      thumbnail: "https://vkvideo.ru/video_ext.php?oid=-218344798&id=456240170&hd=2",
     },
     {
       id: 2,
-      thumbnail: "https://vkvideo.ru/video_ext.php?oid=-218344798&id=456240201&hd=2",
+      thumbnail: "https://vk.com/video_ext.php?oid=-218344798&id=456240201&hd=2&",
     },
     {
       id: 3,
-      thumbnail: "https://vkvideo.ru/video_ext.php?oid=-218344798&id=456240167&hd=2",
+      thumbnail: "https://vkvideo.ru/video_ext.php?oid=-218344798&id=456240182&hd=2",
     },
     {
       id: 4,
-      thumbnail: "https://vkvideo.ru/video_ext.php?oid=-218344798&id=456240182&hd=2",
+      thumbnail: "https://vk.com/video_ext.php?oid=-218344798&id=456240171&hd=2&",
     },
-     {
+    {
       id: 5,
-      thumbnail: "https://vkvideo.ru/video_ext.php?oid=-218344798&id=456240167&hd=2",
+      thumbnail: "https://vk.com/video_ext.php?oid=-218344798&id=456240173&hd=2",
     },
-     {
+    {
       id: 6,
-      thumbnail: "https://vkvideo.ru/video_ext.php?oid=-218344798&id=456240170&hd=2",
+      thumbnail: "https://vk.com/video_ext.php?oid=-218344798&id=456240200&hd=2",
     },
   ];
 
