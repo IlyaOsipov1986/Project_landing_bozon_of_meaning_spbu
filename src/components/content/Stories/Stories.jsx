@@ -10,7 +10,7 @@ const Stories = () => {
                 <div className="stories__container">
                     <div className="stories__title">
                       <h1>Истории</h1>
-                      <p>Небольшое описание блока</p>  
+                      {/* <p>Небольшое описание блока</p>   */}
                     </div>
                     <VideoGalleryCarousel />
                 </div>
