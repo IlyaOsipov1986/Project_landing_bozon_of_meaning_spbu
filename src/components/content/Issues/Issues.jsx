@@ -26,7 +26,7 @@ const Issues = () => {
                 <div className="issues__container">
                     <div className="issues__title">
                          <h1>Выпуски</h1>
-                         <p>Тут короткий текст-описание, если нужно</p>
+                         <p>{selectedVideo.desc}</p>
                     </div>
                     <div className="issues__tabs">
                         {issuesTabs.map((el) => {

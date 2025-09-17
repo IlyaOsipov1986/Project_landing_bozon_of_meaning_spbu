@@ -44,8 +44,13 @@
     p {
         @include base-16;
         line-height: 26px;
-        letter-spacing: 0%;
+        text-align: center;
         opacity: 70%;
+
+        @media (max-width: $mobile-s) {
+            @include base-14;
+             line-height: 20px;
+        }
     }
 
     @media (max-width: $mobile) {
