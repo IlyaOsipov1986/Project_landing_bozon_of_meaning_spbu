@@ -141,7 +141,13 @@
 .slider-block__logo-play-wrap {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     max-height: 100px;
+
+    @media(max-width: $mobile) {
+        justify-content: start;
+        gap: 10px;
+    }
 }
 
 .slider-block__logo-play-btn {
@@ -171,6 +177,37 @@
     @media(max-width: $tablet) {
         width: 70px;
         height: 70px;
+    }
+}
+
+.slider-block__logo-spbu {
+    background-image: url("../../../assets/img/icons/headerMainSPBULogotype.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 330px;
+    height: 64px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    background-position: center;
+
+     &:hover {
+        background-image: url("../../../assets/img/icons/headerMainSPBULogotype.svg");
+        width: 330px;
+        height: 64px;
+        transform: scale(1.1);
+    }
+
+    @media(max-width: $large-screen-size) {
+        width: 260px;
+    }
+
+    @media(max-width: $tablet) {
+        width: 200px;
+    }
+
+    @media(max-width: $mobile) {
+        width: 150px;
     }
 }
 

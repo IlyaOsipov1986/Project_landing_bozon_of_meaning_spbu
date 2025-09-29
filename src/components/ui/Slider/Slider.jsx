@@ -11,6 +11,7 @@ const Slider = () => {
                 <div className="slider-block__logo">
                     <div className="slider-block__logo-play-wrap">
                         <a className="slider-block__logo-play-btn" href="https://vk.com/clips/v_nauke" target="_blank" rel="noopener noreferrer"/>
+                        <a className="slider-block__logo-spbu" href="https://spbu.ru/" target="_blank" rel="noreferrer noopener"/>
                     </div>
                     <div className="slider-block__logo-item-icon"/>
                     <div className="slider-block__logo-item-desc">

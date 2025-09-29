@@ -24,6 +24,7 @@ const AboutProject = () => {
                         </div>
                         <h5 className="about-project__card_title">{aboutProjectDataCards[1]?.title}</h5>
                         <p className="about-project__card_desc">{aboutProjectDataCards[1]?.desc}</p>
+                        <a className="about-project__card_link_spbu_btn" href="https://spbu.ru/" target="_blank" rel="noopener noreferrer"/>
                         <div className="about-project__card_bg-image"/>
                     </div>
                     <div className="about-project__card_3">

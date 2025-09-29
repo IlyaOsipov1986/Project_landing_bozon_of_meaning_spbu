@@ -35,13 +35,13 @@
   }
 
   @media (max-width: $mobile-s) {
-    padding: 5px 10px 0 0;
+    padding: 5px 10px 0 10px;
     height: 50px;
   }
 }
 
 .header__logo {
-  width: 100px;
+  width: 84px;
 }
 
 .header-logo-link {
@@ -61,6 +61,10 @@
     @include base-16;
     color: $white;
     cursor: pointer;
+  }
+
+  @media (max-width: $laptop) {
+    gap: 8px;
   }
 
   @media (max-width: $tablet-xs) {

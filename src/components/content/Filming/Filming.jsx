@@ -1,3 +1,5 @@
+// eslint-disable-next-line no-unused-vars
+import { animated, useSpring } from "react-spring";
 import "./Filming.scss";
 import React, { useState } from "react";
 import Container from "../../../components/layout/Container/Container";
@@ -6,14 +8,28 @@ import filmingImage_01 from "../../../assets/img/filmingImage_01.png";
 import filmingImage_02 from "../../../assets/img/filmingImage_02.png";
 import useCardsCarousel from "../../../utils/hooks/useCardsCarousel";
 import CardsTransition from "../../layout/CardsTransition/CardsTransition";
-import { filmingDataImages } from "../../../config";
+import { filmingData } from "../../../config";
 import { findFirstElemLastElemForShowArrow } from "../../../utils/utils";
 
 const Filming = () => {
 
     const [direction, setDirection] = useState(1);
-    const { visibleCards, nextGroup, prevGroup } = useCardsCarousel(filmingDataImages, 1);
-    const setNotActiveArrow = findFirstElemLastElemForShowArrow(filmingDataImages, visibleCards);
+    const { visibleCards, nextGroup, prevGroup } = useCardsCarousel(filmingData, 1);
+    const setNotActiveArrow = findFirstElemLastElemForShowArrow(filmingData, visibleCards);
+
+    const springStyle = useSpring({
+        from: { 
+            opacity: 0,
+            transform: 'translateY(30px) scale(0.95)'
+        },
+        to: { 
+            opacity: 1,
+            transform: 'translateY(0px) scale(1)'
+        },
+        config: { duration: 500 },
+        reset: true, // Сбрасывает анимацию при каждом изменении
+        key: direction
+    });
 
     const onHandleToggleArrowNext = () => {
         setDirection(1);
@@ -38,7 +54,7 @@ const Filming = () => {
                                         <CardsTransition
                                             direction={direction}
                                         >
-                                            <img src={el.image} alt="image"/>
+                                            <img src={el.image} alt="image"/>                                        
                                         </CardsTransition>
                                     </React.Fragment>
                                 )
@@ -53,9 +69,17 @@ const Filming = () => {
                                 isNotActiveArrow={setNotActiveArrow}
                             />
                         </div>
-                        <div className="filming__main-desc">
-                            <p>«Сделайте нечто... разнообразное, чтобы при одном только взгляде на здание дух захватывало» – с этих слов началась история особняка А.Ф. Кельха. Их произнесла Варвара Петровна Кельх (в девичестве Базанова) – представительница семьи сибирских золотопромышленников, владелица Ленских золотых приисков и Ленско-Витимского пароходства. В 1895 году она вместе с мужем Александром Фердинандовичем купила тот самый дом номер 28 на улице Чайковского. Только выглядел он тогда иначе, а экспрессивная фраза новой хозяйки стала заданием для архитекторов.</p>
-                        </div>
+                        {visibleCards.map((el) => {
+                            return (
+                                <React.Fragment key={el.id}>
+                                    <div className="filming__main-desc">
+                                        <animated.div style={springStyle}>
+                                            <p>{el.desc}</p>
+                                        </animated.div>
+                                    </div>
+                                </React.Fragment>
+                            )
+                        })}
                         <div className="filming__main-title">
                             <div className="filming__main-title-item-without-img">
                                 <h1 style={{fontWeight: '400'}}>Съемки в</h1>

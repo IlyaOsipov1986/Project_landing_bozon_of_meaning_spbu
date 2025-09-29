@@ -90,6 +90,7 @@
 .filming__main {
     display: grid;
     grid-template-columns: auto 495px;
+    grid-template-rows: 275px;
     grid-row-start: 2;
     grid-row-end: 2;
     column-gap: 62px;
@@ -102,6 +103,7 @@
     @media (max-width: $tablet-xs) {
         grid-template-columns: 1fr;
         row-gap: 30px;
+        grid-template-rows: auto;
     }
 }
 
@@ -178,8 +180,9 @@
 }
 
 .filming__main-desc {
-    display: block;
-
+    display: flex;
+    align-items: center;
+ 
     p {
         @include base-16;
         @include light;
