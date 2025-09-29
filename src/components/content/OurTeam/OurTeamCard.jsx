@@ -1,6 +1,6 @@
-import  './OurTeam.scss';
 // eslint-disable-next-line no-unused-vars
 import { animated, useSpring } from "react-spring";
+import  './OurTeam.scss';
 import useHover from "../../../utils/hooks/useHover.js";
 import useMobile from "../../../utils/hooks/useMobile.js";
 
@@ -9,7 +9,7 @@ const OurTeamCard = ({item}) => {
     const isMobile = useMobile('1000px');
     const [hoverRef, isHovered] = useHover();
     const springStyle = useSpring({
-        opacity: isHovered ? 1 : 0,
+        visibility: isHovered ? 1 : 0,
         config: { duration: 500 },
     });
 

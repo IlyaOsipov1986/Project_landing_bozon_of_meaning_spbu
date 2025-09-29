@@ -164,7 +164,7 @@
 
 .about-project__card_desc {
     @include base-16;
-    line-height: 26px;
+    line-height: 25px;
     @include light;
 
     @media (max-width: $mobile) {
@@ -220,4 +220,38 @@
         height: 27px;
         transform: scale(1.1);
     }
+
+    @media (max-width: $mobile) {
+        background-size: contain;
+        width: 100%;
+        height: 22px;
+        margin: 0 auto;
+    }  
+}
+
+.about-project__card_link_spbu_btn {
+    background-image: url("../../../assets/img/icons/linkButtonSPBU.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: 0.3s ease;
+    background-position: center;
+    background-size: contain;
+    width: 242px;
+    height: 27px;
+    z-index: 55;
+
+    &:hover {
+        background-image: url("../../../assets/img/icons/linkButtonSPBU.svg");
+        width: 242px;
+        height: 27px;
+        transform: scale(1.1);
+    }
+
+    @media (max-width: $mobile) {
+        background-size: contain;
+        width: 200px;
+        height: 22px;
+        margin: 0 auto;
+    } 
 }
