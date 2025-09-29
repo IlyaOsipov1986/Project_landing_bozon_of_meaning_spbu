@@ -1,6 +1,5 @@
 import "../Slider/Slider.scss";
-// import sliderImageOne from "../../../assets/img/headerMainImage.png";
-import bgSliderLayout from "../../../assets/img/bgSliderLayout.png";
+import bgSliderLayout from "../../../assets/img/bgSliderLayout.jpg";
 
 const Slider = () => {
 
@@ -33,16 +32,6 @@ const Slider = () => {
                         className="slider-headline__image-desktop"
                         alt="image-bg"
                     />
-                    {/* <img src={sliderImageOneMobile} style={{
-                        backgroundRepeat: 'no-repeat',
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'bottom',
-                        width: '100%',
-                        height: '100%',
-                    }}
-                        className="slider-headline__image-mobile"
-                        alt="image-bg"
-                    /> */}
                 </div>    
             </div>
         </div>

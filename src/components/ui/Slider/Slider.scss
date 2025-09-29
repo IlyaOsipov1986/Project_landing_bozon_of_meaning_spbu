@@ -143,11 +143,6 @@
     align-items: center;
     justify-content: space-between;
     max-height: 100px;
-
-    @media(max-width: $mobile) {
-        justify-content: start;
-        gap: 10px;
-    }
 }
 
 .slider-block__logo-play-btn {
