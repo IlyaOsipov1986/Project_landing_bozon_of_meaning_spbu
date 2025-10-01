@@ -171,7 +171,6 @@
     h5 {
         @include base-25;
         @include regular;
-        font-style: italic;
         line-height: 28px;
 
       @media (max-width: $mobile-s) {

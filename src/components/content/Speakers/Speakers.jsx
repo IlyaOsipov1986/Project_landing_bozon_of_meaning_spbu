@@ -12,6 +12,7 @@ const Speakers = () => {
     const [descSpeaker, setDescSpeaker] = useState({
         isActive: speakersData[0].id,
         name: speakersData[0].name,
+        second_name: speakersData[0].second_name,
         job: speakersData[0].jobTitle,
         desc: speakersData[0].bio
     });
@@ -34,6 +35,7 @@ const Speakers = () => {
         setDescSpeaker({
             isActive: item.id,
             name: item.name,
+            second_name: item.second_name,
             job: item.jobTitle,
             desc: item.bio
         })
@@ -63,7 +65,7 @@ const Speakers = () => {
                     {descSpeaker.isActive && <animated.div style={springStyle}>
                         <div className="speakers__desc-speaker">
                             <div className="speakers__desc-speaker__name">
-                                <h5>{descSpeaker.name}</h5>
+                                <h5><i style={{ fontWeight: 100 }}>{descSpeaker.name} </i>{descSpeaker.second_name}</h5>
                                 <span>{descSpeaker.job}</span>
                             </div>
                             <p>{descSpeaker.desc}</p>
