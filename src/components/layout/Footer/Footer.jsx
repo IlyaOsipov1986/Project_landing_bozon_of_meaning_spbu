@@ -21,7 +21,7 @@ const currentYear = useMemo(() => new Date().getFullYear(), []);
         <div className="footer__logo-wrap">
           <img src={footerLogo} alt="БОЗОН СМЫСЛА"/>
         </div>
-        <p>© {currentYear} Все права защищены</p>
+        <a href="https://spbu.ru/" target="_blank" rel="noreferrer noopener">© Санкт-Петербургский государственный университет (СПбГУ) {currentYear}. Все права защищены.</a>
       </div>
     </footer>
   )
