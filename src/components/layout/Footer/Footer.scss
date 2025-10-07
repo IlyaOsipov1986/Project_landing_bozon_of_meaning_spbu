@@ -84,10 +84,17 @@
   flex-direction: column;
   gap: 24px;
 
-  p {
+  a {
     @include base-16;
     line-height: 25px;
     @include light;
+    text-decoration: underline;
+
+    @media (max-width: $mobile) {
+      @include base-12;
+      line-height: 18px;
+      text-align: center;
+   }
   }
 
   @media (max-width: $mobile) {
